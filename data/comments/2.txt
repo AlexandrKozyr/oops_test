@@ -1,4 +1,4 @@
-Start Time: 22-09-2015 08:46:59
+Start Time: 22-09-2015 08:59:44
 id, sku, name, qty, is_stock
 1, HR-1000, Filter, 10, 1
 2, HR-1001, Фильтр, 2, 1
@@ -12,7 +12,7 @@ id, sku, name, qty, is_stock
 10, HR-1009, Pen, 25, 1
 11, HR-1009a, Pencil, 2, 0
 
-End Time: 22-09-2015 08:46:59
-
-command to redirect output steam i have used
+End Time: 22-09-2015 08:59:44
+command ussed
 d:\localsite\test_oops\hr_test_AlexandrKozyr>php cli.php "Product" "ConsoleOutput" > d:\localsite\test_oops\hr_test_AlexandrKozyr\data\comments\2.txt
+

@@ -4,13 +4,13 @@ namespace OpsWay\Migration\Writer;
 
 use OpsWay\Migration\Writer\WriterInterface;
 
-class Csv implements WriterInterface
-{
+class Csv implements WriterInterface {
+
     protected $file;
     protected $filename;
 
-    public function __construct()
-    {
+    public function __construct() {
+        $this->filename = $_SERVER['DOCUMENT_ROOT'] . 'data/export.csv';
         $this->checkFileName();
     }
 
@@ -19,8 +19,7 @@ class Csv implements WriterInterface
      *
      * @return bool
      */
-    public function write(array $item)
-    {
+    public function write(array $item) {
         if (!$this->file) {
             if (!($this->file = fopen($this->filename, 'w+'))) {
                 throw new \RuntimeException(sprintf('Can not create file "%s" for writing data.', $this->filename));
@@ -30,17 +29,16 @@ class Csv implements WriterInterface
         return fputcsv($this->file, $item);
     }
 
-    public function __destruct()
-    {
+    public function __destruct() {
         if ($this->file) {
             fclose($this->file);
         }
     }
 
-    private function checkFileName()
-    {
+    private function checkFileName() {
         if (file_exists($this->filename)) {
             throw new \RuntimeException(sprintf('File "%s" already exists. Remove it and run again.', $this->filename));
         }
     }
+
 }
