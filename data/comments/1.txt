@@ -1,0 +1,11 @@
+The aplication works next way, as i understand, we get some data from Db and put them
+to CSV form for further migration.
+
+investigating this app i find a lot of calsses, all of them we could devide into few logical part:
+1. abstract factory part (Factory pattern to abstract from object class. gives an instrument for creating our reader 
+and writer class) - AbstractProcessor, ProcessorInterface, ReadWriteProcessor, YieldProcessor, ReaderWriterTrait
+2. reader part - ReaderFactory, ReaderInterface, Product
+3. writer part - Html, Stub, WriterFactory, WriterInterface, ConsoleOutout
+
+The main value of app is its flexibility, we can easy change writer and reader without changing
+global class system.

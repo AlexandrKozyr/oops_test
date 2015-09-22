@@ -1,6 +1,6 @@
 <?php
 
-namespace OpsWay\Migration\Reader\Db;
+namespace OpsWay\Migration\Reader;
 
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;

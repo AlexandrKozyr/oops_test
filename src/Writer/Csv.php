@@ -1,6 +1,6 @@
 <?php
 
-namespace OpsWay\Migration\Writer\File;
+namespace OpsWay\Migration\Writer;
 
 use OpsWay\Migration\Writer\WriterInterface;
 

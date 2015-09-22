@@ -1,5 +1,4 @@
 <?php
-
 use OpsWay\Migration\Logger\ConsoleLogger;
 use OpsWay\Migration\Processor\ReadWriteProcessor;
 use OpsWay\Migration\Reader\ReaderFactory;
